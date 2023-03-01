@@ -27,6 +27,8 @@ jobs:
       - name: Build documentation
         shell: bash
         run: ./run.sh
+        env:
+          JAVA_HOME: $JAVA_HOME_17_X64
 
       - name: Check GitHub Pages status
         uses: crazy-max/ghaction-github-status@v1
@@ -41,4 +43,3 @@ jobs:
           build_dir: gen/build/docs/javadoc
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          JAVA_HOME: $JAVA_HOME_17_X64
