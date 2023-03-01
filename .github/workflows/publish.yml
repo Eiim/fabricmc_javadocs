@@ -26,9 +26,7 @@ jobs:
 
       - name: Build documentation
         shell: bash
-        run: ./run.sh
-        env:
-          JAVA_HOME: $JAVA_HOME_17_X64
+        run: export JAVA_HOME=$JAVA_HOME_17_X64 & ./run.sh
 
       - name: Check GitHub Pages status
         uses: crazy-max/ghaction-github-status@v1
