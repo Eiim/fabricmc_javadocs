@@ -1,4 +1,4 @@
-FROM gradle:6.7-jdk8
+FROM gradle:6.9-jdk17
 
 RUN mkdir /source
 WORKDIR /source
